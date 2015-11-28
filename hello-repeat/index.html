@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Monstros Piada</title>
+        <style media="screen">
+            .par{color: blue;}
+            .impar{color: green;}
+        </style>
+
+    </head>
+    <body ng-app="app" ng-controller="MonstersController as vm">
+
+        <input type="text" name="name" ng-model="search">
+        <ul>
+            <li ng-class="{'par':$even, 'impar':$odd}" ng-repeat="monster in vm.monsters | filter:search" >
+                {{$index}} - O mostro "{{monster.name}}" tem o  poder "{{monster.power}}"
+            </li>
+        </ul>
+    <script src="../scripts/angular.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="monsters-controller.js" charset="utf-8"></script>
+    </body>
+</html>
