@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hello message</title>
+    </head>
+    <body ng-app="app">
+        <div ng-controller="MainController as vmMain">
+            <h1>Faça seu cadastro {{vmMain.message}} | {{user}}</h1>
+
+            <div ng-controller="UserController as vmUser">
+                <h2>Olá {{vmUser.message}} e {{vmMain.message}} | {{user}}</h2>
+            </div>
+        </div>
+
+        <script src="../scripts/angular.js" charset="utf-8"></script>
+        <script src="app.js" charset="utf-8"></script>
+        <script src="main-controller.js" charset="utf-8"></script>
+        <script src="user-controller.js" charset="utf-8"></script>
+
+    </body>
+</html>
