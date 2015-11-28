@@ -14,13 +14,16 @@
             <p>
                 Com mustashe: {{vm.name}}
             </p>
+            <p>
+                <button type="button" name="button" ng-click="vm.mudarNome()">Sem Nome</button>
+                <button type="button" name="button" ng-click="vm.mudarNome('Fernandinho Beira Mar')">Fernandinho Beira Mar</button>
+                <button type="button" name="button" ng-click="vm.mudarNome(0)">Zero</button>
+                <button type="button" name="button" ng-click="vm.mudarNome(1560)">1560</button>
+
+            </p>
         </form>
-
-
     <script src="../scripts/angular.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
     <script src="form-controller.js" charset="utf-8"></script>
     </body>
-
-
 </html>
