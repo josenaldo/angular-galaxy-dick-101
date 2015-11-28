@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hello Form</title>
+    </head>
+    <body ng-app="app">
+        <form class="" ng-controller="FormController as vm">
+            <label>Nome</label>
+            <input type="text" name="name" ng-model="vm.name">
+            <p>
+                Com ng-bind: <span ng-bind="vm.name"></span>
+            </p>
+            <p>
+                Com mustashe: {{vm.name}}
+            </p>
+        </form>
+
+
+    <script src="../scripts/angular.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="form-controller.js" charset="utf-8"></script>
+    </body>
+
+
+</html>
